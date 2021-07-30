@@ -62,7 +62,7 @@ function getData() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("demo").innerHTML =
       this.responseText;
-      output(JSON.stringify(myminecraftserverdata, undefined, 4));
+      output(JSON.stringify(this.responseText, undefined, 4));
     }else if (this.status){
 		document.getElementById("demo").innerHTML = "Can not access: " + targetUrl 
 			+ " <br /> Response: " + this.status + " " + this.responseText;
