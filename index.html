@@ -44,7 +44,7 @@ function getData() {
 }
 	</pre>
 
-<h2>XHR (XMLHttpRequest) GET Request Example</h2>
+<h2>XHR (XMLHttpRequest) GET Request Example - 5:58 pm</h2>
 <button type="button" onclick="getData()">GET Data</button>
 <p id="demo"></p>
 
@@ -62,7 +62,7 @@ function getData() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("demo").innerHTML =
       this.responseText;
-      myminecraftserverdata = this.responseText;
+      output(JSON.stringify(myminecraftserverdata, undefined, 4));
     }else if (this.status){
 		document.getElementById("demo").innerHTML = "Can not access: " + targetUrl 
 			+ " <br /> Response: " + this.status + " " + this.responseText;
