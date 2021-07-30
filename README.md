@@ -21,7 +21,7 @@ Hence, it's good to have this simple example as a refresher.
 
 # Demo
 See it in action here: 
-https://jsbonso.github.io/Simple-GET-Request-using-XHR/
+https://nathanbaterina.github.io/Simple-GET-Request-using-XHR/
 
 
 # Running Locally
@@ -35,7 +35,7 @@ You can change the targetUrl variable with any REST API or any webservice that y
 <script>
 function getData() {
   var xhttp = new XMLHttpRequest();
-  var targetUrl = "https://pokeapi.co/api/v2/pokemon/pikachu";
+  var targetUrl = "https://api.mcsrvstat.us/2/play.keplermc.xyz";
   
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
