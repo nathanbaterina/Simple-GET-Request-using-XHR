@@ -54,11 +54,13 @@ function getData() {
 function getData() {
   var xhttp = new XMLHttpRequest();
   var targetUrl = "https://api.mcsrvstat.us/2/play.keplermc.xyz";
+  var myminecraftserverdata;
   
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("demo").innerHTML =
       this.responseText;
+      myminecraftserverdata = this.responseText;
     }else if (this.status){
 		document.getElementById("demo").innerHTML = "Can not access: " + targetUrl 
 			+ " <br /> Response: " + this.status + " " + this.responseText;
@@ -95,7 +97,7 @@ function syntaxHighlight(json) {
 }
 
 var obj = {a:1, 'b':'foo', c:[false,'false',null, 'null', {d:{e:1.3e5,f:'1.3e5'}}]};
-var str = JSON.stringify(obj, undefined, 4);
+var str = JSON.stringify(myminecraftserverdata, undefined, 4);
 
 output(str);
 output(syntaxHighlight(str));
